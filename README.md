@@ -37,5 +37,3 @@ We recommend the following workflow:
 2. Instruction Tuning: Fine-tune models using LLaMA-Factory [1].
 3. Evaluation: Use ```evaluate.py``` to assess the safety and utility of the fine-tuned models.
 4. Analysis: Use ```Analysis.ipynb``` to analyze results and generate the relevant figures.  
-
-<hr style="border: none; height: 1px; solid #eaecef;" />
