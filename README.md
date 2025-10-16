@@ -1,6 +1,6 @@
 # When Style Breaks Safety: Defending LLMs Against Superficial Style Alignment
 
-In this paper, we investigate three questions: 
+In this <a href="https://arxiv.org/abs/2506.07452">paper</a>, we investigate three questions: 
 1. Do style patterns affect LLM safety? 
 2. How do safety vulnerabilities emerge during superficial style alignment? 
 3. How can we mitigate these risks during the alignment process?
@@ -38,6 +38,14 @@ We recommend the following workflow:
 3. Evaluation: Use ```evaluate.py``` to assess the safety and utility of the fine-tuned models.
 4. Analysis: Use ```Analysis.ipynb``` to analyze results and generate the relevant figures.  
 
-<hr style="border: none; height: 1px; solid #eaecef;" />
-
 [1] Zheng, Yaowei, et al. "LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models." ACL 2024.
+
+## Citation
+```
+@article{xiao2025style,
+  title={When Style Breaks Safety: Defending LLMs Against Superficial Style Alignment},
+  author={Xiao, Yuxin and Tonekaboni, Sana and Gerych, Walter and Suriyakumar, Vinith and Ghassemi, Marzyeh},
+  journal={arXiv preprint arXiv:2506.07452},
+  year={2025}
+}
+```
