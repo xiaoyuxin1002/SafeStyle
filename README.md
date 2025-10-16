@@ -1,4 +1,4 @@
-# When Style Breaks Safety: Defending Language Models Against Superficial Style Alignment
+# When Style Breaks Safety: Defending LLMs Against Superficial Style Alignment
 
 In this paper, we investigate three questions: 
 1. Do style patterns affect LLM safety? 
@@ -24,7 +24,7 @@ This folder contains the code implementation for the second research question.
 We recommend the following workflow:
 
 1. Dataset Preparation: Run ```Setup.ipynb``` to prepare the fine-tuning datasets.
-2. Instruction Tuning: Fine-tune models using LLaMA-Factory.
+2. Instruction Tuning: Fine-tune models using LLaMA-Factory [1].
 3. Evaluation: Use ```evaluate.py``` to assess the safety and utility of the fine-tuned models.
 4. Analysis: Use ```Analysis.ipynb``` to analyze results and generate the relevant figures.  
 
@@ -37,3 +37,7 @@ We recommend the following workflow:
 2. Instruction Tuning: Fine-tune models using LLaMA-Factory [1].
 3. Evaluation: Use ```evaluate.py``` to assess the safety and utility of the fine-tuned models.
 4. Analysis: Use ```Analysis.ipynb``` to analyze results and generate the relevant figures.  
+
+<hr style="border: none; height: 1px; solid #eaecef;" />
+
+[1] Zheng, Yaowei, et al. "LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models." ACL 2024.

@@ -5,7 +5,6 @@ import argparse
 import warnings
 import pandas as pd
 from tqdm import tqdm
-from collections import defaultdict
 
 import torch
 import torch.nn.functional as F

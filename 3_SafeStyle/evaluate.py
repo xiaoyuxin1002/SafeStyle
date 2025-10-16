@@ -158,8 +158,6 @@ def save_utility(args, styles, bases, resps, evals):
 cwd = os.getcwd()
 data_safety = pd.read_csv(f'{cwd}/Data/Source/safety.csv')
 data_utility = pd.read_csv(f'{cwd}/Data/Source/utility.csv')
-styles_safety = ['simplified', 'original', 'list', 'poem', 'shakespeare', 'code']
-styles_utility = ['list', 'poem', 'shakespeare', 'code']
 index = data_utility['index'].tolist()
 reshape = lambda x, styles: np.array(x).reshape(-1, len(styles)).T
 abbre2model = {'Llama3.1-8B':'meta-llama/Llama-3.1-8B-Instruct', 
@@ -179,12 +177,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--base', type=str)
     parser.add_argument('--train', type=str)
-    args = parser.parse_args()
-    
+    parser.add_argument('--test', type=str)
+    args = parser.parse_args()    
+
     myprint('-'*10)
-    myprint(f'Base = {args.base}, Train = {args.train}')
+    myprint(f'Base = {args.base}, Train = {args.train}, Test = {args.test}')
     path = f'{cwd}/Model/{args.base}/{args.train}' if args.train!='base' else abbre2model[args.base]
     llm = LLM(model=path, seed=0, tensor_parallel_size=1, gpu_memory_utilization=0.9, max_model_len=4096)
+    styles_safety, styles_utility = [args.test], [args.test]
     
     myprint('Safety Evaluation')
     instructions = data_safety[[f'{s} query' for s in styles_safety]].stack().tolist()

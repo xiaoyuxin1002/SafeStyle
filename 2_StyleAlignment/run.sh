@@ -20,3 +20,5 @@ done
 # "list_suffix-500" "list_suffix-1000"
 # "poem_prefix-500" "poem_prefix-1000" 
 # "poem_suffix-500" "poem_suffix-1000"
+# "news_prefix-1000"
+# "legal_prefix-1000"
